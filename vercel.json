@@ -6,12 +6,12 @@
     }],
     "routes": [
         {
-            "src": "/",
-            "dest": "/"
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
         },
         {
-            "src": "/",
-            "dest": "/"
+            "src": "/(.*)",
+            "dest": "todomvt/wsgi.py"
         }
     ]
 }
