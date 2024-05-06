@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('shibiladmin/', admin.site.urls),
     path("",include("todo.urls"))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
