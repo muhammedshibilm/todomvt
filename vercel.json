@@ -1,17 +1,21 @@
 {
-    "builds": [{
-        "src": "todomvt/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
-    },
-    {
-        "src": "build_files.sh",
-        "use": "@vercel/python",
-        "config": {
-            "disDir": "staticfiles_build"
+    "builds": [
+        {
+            "src": "todomvt/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.12"
+            }
+        },
+        {
+            "src": "build.sh",
+            "use": "@vercel/static-build",
+            "config": {
+                "disDir": "staticfiles_build"
+            }
         }
-    }
-],
+    ],
     "routes": [
         {
             "src": "/static/(.*)",
