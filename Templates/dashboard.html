@@ -26,7 +26,7 @@
           <div class="col-10">
               <p {% if todo.status  %} style="text-decoration: line-through;" {% endif %}> {{todo.tododata }} </p>
           </div>
-          <div class="col-2 d-flex justify-content-around">
+          <div class="col-3 d-flex justify-content-around">
             <button  type="button" class="btn btn-no-outline">
                 <a href="{% url 'completed' todo.pk %}"><span class="material-symbols-outlined">
                     done_all
