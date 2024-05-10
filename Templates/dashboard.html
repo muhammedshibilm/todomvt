@@ -23,10 +23,10 @@
       {% if todos %}
       {% for todo in todos %}
       <div class="row shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <div class="col-9">
+          <div class="col-8">
               <p {% if todo.status  %} style="text-decoration: line-through;" {% endif %}> {{todo.tododata }} </p>
           </div>
-          <div class="col-3 d-flex justify-content-around">
+          <div class="d-flex justify-content-around">
             <button  type="button" class="btn btn-no-outline">
                 <a href="{% url 'completed' todo.pk %}"><span class="material-symbols-outlined">
                     done_all
